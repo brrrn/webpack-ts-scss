@@ -1,0 +1,37 @@
+
+@mixin respond-to($breakpoint, $orientation: false, $width: true) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    @if $width != false {
+    // Prints a media query based on the value
+      @if $orientation != false {
+        @media (min-width: $value) and (orientation: $orientation){
+          @content;
+        }
+      } @else {
+        @media (min-width: $value) {
+          @content;
+        }
+      }
+    } @else {
+      @if $orientation != false {
+        @media (min-height: $value) and (orientation: $orientation){
+          @content;
+        }
+      } @else {
+        @media (min-height: $value) {
+          @content;
+        }
+      }
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

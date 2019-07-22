@@ -1,0 +1,8 @@
+@mixin z($layer, $position: relative) {
+    @if $position != "" {
+        position: $position; // relative by default
+    }
+    
+     // Set the z-index to the named layer's index in the list.
+    z-index: layer-index($layer);
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500');
+
+$defaultFont: 'Quicksand', sans-serif;
+
+%h1 {
+    @include fluid-type(font-size, 320px, 769px, rem(22px), rem(32px));
+    font-family: $defaultFont;
+    margin-bottom: rem(30px);
+    font-weight: 500;
+}
+  
+%h2 {
+    @include fluid-type(font-size, 320px, 769px, rem(24px), rem(32px));
+    font-family: $defaultFont;
+    margin-bottom: rem(14px);
+    font-weight: 500;
+}
+
+%h3 {
+    @include fluid-type(font-size, 320px, 769px, rem(22px), rem(26px));
+    font-family: $defaultFont;
+    margin-bottom: rem(12px);
+    font-weight: 400;
+}
+
+%p {
+    @include fluid-type(font-size, rem(320px), rem(769px), rem(20px), rem(24px));
+}
+
+ 

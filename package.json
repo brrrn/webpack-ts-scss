@@ -1,0 +1,39 @@
+{
+  "name": "playground-ts-scss",
+  "version": "1.0.0",
+  "description": "Playground-TS-SCSS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=dev webpack --mode development --progress --config ./webpack/webpack.config.dev.js",
+    "dev-server": "NODE_ENV=dev webpack-dev-server --host 0.0.0.0 --port 8080 --mode development --progress --config ./webpack/webpack.config.dev.js",
+    "build": "webpack --mode production -p --progress --config ./webpack/webpack.config.build.js"
+  },
+  "repository": {},
+  "author": "Brian Heck",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@types/axios": "^0.14.0",
+    "axios": "^0.18.0",
+    "clean-webpack-plugin": "^2.0.1",
+    "ts-loader": "^5.3.3",
+    "typesafe-actions": "^3.2.1",
+    "typescript": "^3.3.3333",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "css-hot-loader": "^1.4.4",
+    "css-loader": "^3.1.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  }
+}

@@ -1,0 +1,5 @@
+@function layer-index($layer) {
+    // This just returns the named layer's
+    // location in the list, which becomes it's z-index.
+    @return index($z-layers, $layer);
+}
